@@ -26,7 +26,6 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <h1>The Hoptimist</h1>
         <Header />
         <Form cities={this.state.breweries}/>
       </div>

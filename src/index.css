@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kelly+Slab&display=swap');
 
 
 
@@ -7,5 +7,5 @@ html, body, #root, .App {
   width: 100vw;
   padding: 0;
   margin: 0;
-  font-family: 'Indie Flower', cursive;
+  font-family: 'Kelly Slab', cursive;
 }
