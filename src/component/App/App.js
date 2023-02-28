@@ -1,6 +1,8 @@
 import React from 'react';
 import './App.css';
 import { getBreweries } from '../../apicall';
+import { Header } from '../Header/Header';
+import Form from '../Form/Form';
 
 class App extends React.Component {
   constructor() {
@@ -25,6 +27,8 @@ class App extends React.Component {
     return (
       <div className="App">
         <h1>The Hoptimist</h1>
+        <Header />
+        <Form />
       </div>
     )
   }

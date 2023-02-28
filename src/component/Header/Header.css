@@ -1,0 +1,11 @@
+
+.header-wrapper {
+  height: 55vh;
+  width: 100%;
+  max-width: 100%;
+  background-image: url("/src/assets/beer-page.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
