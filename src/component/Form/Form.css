@@ -1,0 +1,38 @@
+.city-selector {
+    color: white;
+}
+
+label {
+    font-size: xx-large;
+    margin-right: 20px;
+}
+
+select {
+    width: 200px;
+    height: 25px;
+}
+
+.submit-city {
+    margin-left: 20px;
+    height: 25px;
+    border-radius: 5px;
+    background-color: white;
+    width: 65px;
+}
+
+.submit-city:hover {
+    background-color: rgba(0, 0, 0, 0.941);
+    color: white;
+}
+
+#state {
+    margin-left: 20px;
+}
+
+#cities {
+    margin-right: 20px;
+}
+
+span {
+    font-size: x-large;
+}

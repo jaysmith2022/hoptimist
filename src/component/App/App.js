@@ -28,7 +28,7 @@ class App extends React.Component {
       <div className="App">
         <h1>The Hoptimist</h1>
         <Header />
-        <Form />
+        <Form cities={this.state.breweries}/>
       </div>
     )
   }
