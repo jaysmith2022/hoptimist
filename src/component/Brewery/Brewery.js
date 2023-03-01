@@ -6,6 +6,7 @@ export const Brewery = ({ breweries }) => {
     const brewCard = breweries.map(location => {
         return (
             <BreweryCard 
+            id={location.id}
             name={location.name}
             city={location.city}
             state={location.state}

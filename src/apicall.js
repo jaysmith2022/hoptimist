@@ -8,3 +8,16 @@ export const getBreweries = () => {
         }
     })
 }
+
+
+export const getSingleBrewery = (brewID) => {
+    return fetch(
+      `https://api.openbrewerydb.org/breweries/${brewID}`
+    ).then((response) => {
+      if (!response.ok) {
+        throw new Error("There has been a problem.");
+      } else {
+        return response.json();
+      }
+    });
+  };

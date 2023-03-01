@@ -7,6 +7,7 @@ import { Footer } from "../Footer/Footer";
 import { Brewery } from "../Brewery/Brewery";
 import { Route, Switch, Link } from "react-router-dom";
 import logo from "../../assets/logo-black.png";
+import BreweryDetails from "../BreweryDetails/BreweryDetails";
 
 class App extends React.Component {
   constructor() {
@@ -14,7 +15,8 @@ class App extends React.Component {
     this.state = {
       breweries: [],
       errors: "",
-      filteredBreweries: JSON.parse(localStorage.getItem('filteredBreweries')) || [], // check if filteredBreweries exists in storage and set as initial state
+      filteredBreweries:
+        JSON.parse(localStorage.getItem("filteredBreweries")) || [], // check if filteredBreweries exists in storage and set as initial state
     };
   }
 
@@ -40,15 +42,18 @@ class App extends React.Component {
       filteredBreweries = filteredBreweries.filter(function (brewery) {
         return brewery.state === state;
       });
-    } 
+    }
     this.setState({ filteredBreweries: filteredBreweries });
-    localStorage.setItem('filteredBreweries', JSON.stringify(filteredBreweries)); // store filteredBreweries in storage
+    localStorage.setItem(
+      "filteredBreweries",
+      JSON.stringify(filteredBreweries)
+    ); // store filteredBreweries in storage
   };
 
   render() {
     return (
       <div className="App">
-        <Link style={{textDecoration: "none"}} to="/">
+        <Link style={{ textDecoration: "none" }} to="/">
           <div className="header-wrapper">
             <img src={logo} width="15%" alt="beerlogo" />
             <h1>The Hoptimist</h1>
@@ -56,7 +61,7 @@ class App extends React.Component {
         </Link>
         <Switch>
           <Route exact path="/">
-            <Header/>
+            <Header />
             <Form
               cities={this.state.breweries}
               filterBrewery={this.getFilteredBreweries}
@@ -65,12 +70,19 @@ class App extends React.Component {
           <Route exact path="/breweries">
             <Brewery breweries={this.state.filteredBreweries} />
           </Route>
+          <Route
+            exact
+            path="/breweries/:brewID"
+            render={(props) => (
+              <BreweryDetails {...props} brewID={props.match.params.brewID} />
+            )}
+          >
+          </Route>
         </Switch>
         <Footer />
       </div>
     );
   }
 }
-
 
 export default App;
