@@ -46,7 +46,6 @@ class App extends React.Component {
   };
 
   render() {
-    console.log(this.state.breweries)
     return (
       <div className="App">
         <Link style={{textDecoration: "none"}} to="/">
@@ -62,7 +61,6 @@ class App extends React.Component {
               cities={this.state.breweries}
               filterBrewery={this.getFilteredBreweries}
             />
-
           </Route>
           <Route exact path="/breweries">
             <Brewery breweries={this.state.filteredBreweries} />
