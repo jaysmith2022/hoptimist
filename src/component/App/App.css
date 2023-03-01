@@ -12,10 +12,9 @@ h1 {
   margin-bottom: 10px;
 }
 
-.logo {
-  background-image: url("/src/assets/logo-grey.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
+@media (max-width: 768px) {
+  h1 {
+    font-size: 50px;
+    margin-bottom: 60px;
+  }
 }

@@ -3,6 +3,9 @@ import './App.css';
 import { getBreweries } from '../../apicall';
 import { Header } from '../Header/Header';
 import Form from '../Form/Form';
+import { Footer } from '../Footer/Footer';
+
+
 
 class App extends React.Component {
   constructor() {
@@ -28,6 +31,7 @@ class App extends React.Component {
       <div className="App">
         <Header />
         <Form cities={this.state.breweries}/>
+        <Footer />
       </div>
     )
   }
