@@ -1,4 +1,5 @@
-.single-brewery-name {
+.single-brewery-name,
+.single-brewery-address {
     color: white;
 }
 

@@ -13,6 +13,10 @@ class Form extends React.Component {
 
   handleClick = (event) => {
     event.preventDefault();
+    if ((this.state.city && this.state.state) || (!this.state.city && !this.state.state)) {
+      return;
+    }
+
     this.props.filterBrewery(this.state.city, this.state.state);
     this.clearInputs();
     this.props.history.push("/breweries")
@@ -26,15 +30,6 @@ class Form extends React.Component {
   };
 
   render() {
-    const cities = this.props.cities.map((place) => place.city);
-    const uniqueCities = [...new Set(cities)];
-    const getCities = uniqueCities.map((city) => {
-      return (
-        <option value={city} key={city}>
-          {city}
-        </option>
-      );
-    });
     const states = this.props.cities.map((place) => place.state);
     const removeEmpty = states.filter(
       (state) => state && state.trim().length > 0
@@ -51,17 +46,6 @@ class Form extends React.Component {
     return (
       <div className="city-selector">
         <label htmlFor="cities">Choose a location:</label>
-        <select
-          onChange={(event) => this.setState({ city: event.target.value })}
-          name="cities"
-          id="cities"
-          value={this.state.city}
-          required
-        >
-          <option value="" disabled hidden></option>
-          {getCities}
-        </select>
-        <span>or</span>
         <select
           onChange={(event) => this.setState({ state: event.target.value })}
           name="state"

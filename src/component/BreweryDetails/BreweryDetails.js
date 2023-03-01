@@ -45,6 +45,7 @@ class BreweryDetails extends React.Component {
     return (
       <div className="single-brewery-details">
         <h2 className="single-brewery-name">{this.state.singleBrewery.name}</h2>
+        <p className="single-brewery-address">{this.state.singleBrewery.street} {this.state.singleBrewery.city}, {this.state.singleBrewery.state}</p>
         {this.state.viewport.latitude === 0 ? <h3>Loading...</h3>:
         <Map
           initialViewState={{
