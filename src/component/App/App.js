@@ -43,7 +43,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <Header />
-        <Form cities={this.state.breweries}/>
+        <Form cities={this.state.breweries} filterBrewery={this.getfilteredBreweries}/>
         <Footer />
       </div>
     )
