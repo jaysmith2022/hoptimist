@@ -1,5 +1,6 @@
 import React from "react";
 import "./Form.css";
+import { withRouter } from "react-router-dom";
 
 class Form extends React.Component {
   constructor() {
@@ -14,6 +15,7 @@ class Form extends React.Component {
     event.preventDefault();
     this.props.filterBrewery(this.state.city, this.state.state);
     this.clearInputs();
+    this.props.history.push("/breweries")
   };
 
   clearInputs = () => {
@@ -80,4 +82,4 @@ class Form extends React.Component {
   }
 }
 
-export default Form;
+export default withRouter(Form);
