@@ -26,6 +26,19 @@ class App extends React.Component {
     })
   }
 
+  getfilteredBreweries = (city, state) => {
+    const { breweries } = this.state;
+    let filteredBreweries = breweries;
+    if (city) {
+      filteredBreweries = filteredBreweries.filter(brewery => brewery.city === city);
+    }
+    if (state) {
+      filteredBreweries = filteredBreweries.filter(brewery => brewery.state === state);
+    }
+    return filteredBreweries;
+  }
+  
+
   render() {
     return (
       <div className="App">

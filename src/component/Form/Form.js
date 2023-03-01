@@ -4,13 +4,20 @@ import "./Form.css";
 class Form extends React.Component {
   constructor() {
     super();
-    this.state = {};
+    this.state = {
+        city: "",
+        state: ""
+    };
+  }
+
+  handleClick = (event) => {
+    event.preventDefault()
+    console.log(this.state)
   }
 
   render() {
     const cities = this.props.cities.map((place) => place.city);
     const uniqueCities = [...new Set(cities)];
-
     const getCities = uniqueCities.map((city) => {
       return (
         <option value={city} key={city}>
@@ -18,7 +25,6 @@ class Form extends React.Component {
         </option>
       );
     });
-
     const states = this.props.cities.map(place => place.state)
     const removeEmpty = states.filter(state => state && state.trim().length > 0)
     const uniqueStates = [...new Set(removeEmpty)]
@@ -33,16 +39,16 @@ class Form extends React.Component {
     return (
         <div className="city-selector">
         <label htmlFor="cities">Choose a location:</label>
-        <select name="cities" id="cities" defaultValue="" required>
-          <option value="" disabled hidden></option>
+        <select onChange={(event) => this.setState({ city: event.target.value })} name="cities" id="cities" defaultValue="" required>
+          <option value={this.state.city} disabled hidden></option>
           {getCities}
         </select>
         <span>or</span>
-        <select name="state" id="state" defaultValue="" required>
-          <option value="" disabled hidden></option>
+        <select onChange={(event) => this.setState({ state: event.target.value })} name="state" id="state" defaultValue="" required>
+          <option value={this.state.state} disabled hidden></option>
           {getStates}
         </select>
-        <button className="submit-city">Submit</button>
+        <button onClick={(event) => this.handleClick(event)} className="submit-city">Submit</button>
       </div>
     );
   }
