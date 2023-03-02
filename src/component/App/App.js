@@ -16,7 +16,7 @@ class App extends React.Component {
       breweries: [],
       errors: "",
       filteredBreweries:
-        JSON.parse(localStorage.getItem("filteredBreweries")) || [], // check if filteredBreweries exists in storage and set as initial state
+        JSON.parse(localStorage.getItem("filteredBreweries")) || [],
     };
   }
 
@@ -47,7 +47,7 @@ class App extends React.Component {
     localStorage.setItem(
       "filteredBreweries",
       JSON.stringify(filteredBreweries)
-    ); 
+    );
   };
 
   render() {
@@ -60,24 +60,31 @@ class App extends React.Component {
           </div>
         </Link>
         <Switch>
-          <Route exact path="/">
-            <Header />
-            <Form
-              states={this.state.breweries}
-              filterBrewery={this.getFilteredBreweries}
-            />
-          </Route>
-          <Route exact path="/breweries">
-            <Brewery breweries={this.state.filteredBreweries} />
-          </Route>
+          {this.state.errors ? (
+            <h2 className="error-message">{this.state.errors}</h2>
+          ) : (
+            <Route exact path="/">
+              <Header />
+              <Form
+                states={this.state.breweries}
+                filterBrewery={this.getFilteredBreweries}
+              />
+            </Route>
+          )}
+          {this.state.filteredBreweries.length === 0 ? (
+            <h2 className="no-breweries">No Breweries</h2>
+          ) : (
+            <Route exact path="/breweries">
+              <Brewery breweries={this.state.filteredBreweries} />
+            </Route>
+          )}
           <Route
             exact
             path="/breweries/:brewID"
             render={(props) => (
               <BreweryDetails {...props} brewID={props.match.params.brewID} />
             )}
-          >
-          </Route>
+          ></Route>
         </Switch>
         <Footer />
       </div>

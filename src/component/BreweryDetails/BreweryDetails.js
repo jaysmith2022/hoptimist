@@ -50,6 +50,9 @@ class BreweryDetails extends React.Component {
           <Link to="/">
             <button className="go-home">Back to Home</button>
           </Link>
+          <Link to="/breweries">
+            <button className="go-to-breweries">Back to Breweries</button>
+          </Link>
         </div>
         <h2 className="single-brewery-name">{this.state.singleBrewery.name}</h2>
         <p className="single-brewery-address">
@@ -59,6 +62,7 @@ class BreweryDetails extends React.Component {
         <p className="single-brewery-phone">
           Phone Number: {this.state.singleBrewery.phone}
         </p>
+        {this.state.singleBrewery.website_url !== null &&
         <p className="single-brewery-website">
           <a
             href={this.state.singleBrewery.website_url}
@@ -68,6 +72,7 @@ class BreweryDetails extends React.Component {
             Visit The Website
           </a>
         </p>
+        }
         {this.state.viewport.latitude === 0 ? (
           <h3>Loading...</h3>
         ) : (
