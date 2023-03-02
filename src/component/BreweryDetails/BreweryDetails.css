@@ -1,8 +1,13 @@
 .single-brewery-name,
 .single-brewery-address,
-.single-brewery-phone {
+.single-brewery-phone,
+.single-brewery-website {
     color: white;
 }
+
+.single-brewery-website a {
+    color: #ff0000; /* change this to the desired color */
+  }
 
 .single-brewery-details {
     display: flex;
