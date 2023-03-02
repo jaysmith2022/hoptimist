@@ -47,7 +47,7 @@ class App extends React.Component {
     localStorage.setItem(
       "filteredBreweries",
       JSON.stringify(filteredBreweries)
-    ); // store filteredBreweries in storage
+    ); 
   };
 
   render() {
