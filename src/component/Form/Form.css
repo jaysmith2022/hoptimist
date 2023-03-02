@@ -11,6 +11,7 @@
   select {
     width: 25vw;
     height: 3vh;
+    cursor: pointer;
   }
   
   .submit-city {
@@ -19,6 +20,7 @@
     border-radius: 5px;
     background-color: white;
     width: 10vw;
+    cursor: pointer;
   }
   
   .submit-city:hover {

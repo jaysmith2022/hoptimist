@@ -6,10 +6,10 @@ export const BreweryCard = ({ id, name, city, state, address }) => {
     <Link to={`/breweries/${id}`} style={{ textDecoration: "none" }}>
       <div className="brew-card">
         <h3>{name}</h3>
+        <p>{address}</p>
         <p>
           {city}, {state}
         </p>
-        <figcaption>{address}</figcaption>
       </div>
     </Link>
   );

@@ -6,3 +6,17 @@
     margin: 4% auto;
     gap: 25px 25px;
 }
+
+.back-button-1 {
+    margin-top: 20px;
+    width: 90%;
+    display: flex;
+    margin-left: 95px;
+}
+
+button {
+    background-color: white;
+    font-family: 'Kelly Slab', cursive;
+    font-weight: bold;
+    width: 120px;
+}

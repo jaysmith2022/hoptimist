@@ -3,6 +3,7 @@ import Map, {Marker} from 'react-map-gl';
 import "./BreweryDetails.css";
 import { getSingleBrewery } from "../../apicall";
 import 'mapbox-gl/dist/mapbox-gl.css'
+import { Link } from "react-router-dom";
 
 class BreweryDetails extends React.Component {
   constructor() {
@@ -44,8 +45,14 @@ class BreweryDetails extends React.Component {
     const MAPBOX_TOKEN = 'pk.eyJ1IjoiamF5c21pdGg2MDM1IiwiYSI6ImNsZXEzNHh3cjBpN2YzcG52NGExNWgxZ2EifQ.hl74HXe1p7RQMumuu7RaSg'
     return (
       <div className="single-brewery-details">
+        <div className="back-button">
+            <Link to="/">
+            <button>Back to Home</button>
+            </Link>
+        </div>
         <h2 className="single-brewery-name">{this.state.singleBrewery.name}</h2>
         <p className="single-brewery-address">{this.state.singleBrewery.street} {this.state.singleBrewery.city}, {this.state.singleBrewery.state}</p>
+        <p className="single-brewery-phone">Phone Number: {this.state.singleBrewery.phone}</p>
         {this.state.viewport.latitude === 0 ? <h3>Loading...</h3>:
         <Map
           initialViewState={{
