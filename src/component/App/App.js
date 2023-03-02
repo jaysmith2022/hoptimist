@@ -63,7 +63,7 @@ class App extends React.Component {
           <Route exact path="/">
             <Header />
             <Form
-              cities={this.state.breweries}
+              states={this.state.breweries}
               filterBrewery={this.getFilteredBreweries}
             />
           </Route>

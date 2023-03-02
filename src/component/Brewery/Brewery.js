@@ -20,7 +20,7 @@ export const Brewery = ({ breweries }) => {
     <div>
       <div className="back-button-1">
         <Link to="/">
-          <button>Back to Home</button>
+          <button className="go-home">Back to Home</button>
         </Link>
       </div>
       <div className="brewcard-container">{brewCard}</div>

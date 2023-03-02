@@ -48,7 +48,7 @@ class BreweryDetails extends React.Component {
       <div className="single-brewery-details">
         <div className="back-button">
           <Link to="/">
-            <button>Back to Home</button>
+            <button className="go-home">Back to Home</button>
           </Link>
         </div>
         <h2 className="single-brewery-name">{this.state.singleBrewery.name}</h2>

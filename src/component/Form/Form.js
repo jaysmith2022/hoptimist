@@ -30,34 +30,39 @@ class Form extends React.Component {
   };
 
   render() {
-    const states = this.props.cities.map((place) => place.state);
-    const removeEmpty = states.filter(
-      (state) => state && state.trim().length > 0
-    );
-    const uniqueStates = [...new Set(removeEmpty)];
-    const getStates = uniqueStates.map((state) => {
-      return (
-        <option value={state} key={state}>
-          {state}
-        </option>
+    let getStates = null;
+    if (Array.isArray(this.props.states)) {
+      const states = this.props.states.map((place) => place.state);
+      const removeEmpty = states.filter(
+        (state) => state && state.trim().length > 0
       );
-    });
+      const uniqueStates = [...new Set(removeEmpty)];
+      getStates = uniqueStates.map((state) => {
+        return (
+          <option value={state} key={state}>
+            {state}
+          </option>
+        );
+      });
+    }
 
     return (
       <div className="city-selector">
         <label htmlFor="cities">Choose a location:</label>
         <select
+          className="drop-down"
           onChange={(event) => this.setState({ state: event.target.value })}
           name="state"
           id="state"
           value={this.state.state}
           required>
-          <option value="" disabled hidden></option>
+          <option value="" disabled >
+          </option>
           {getStates}
         </select>
         <button
           onClick={(event) => this.handleClick(event)}
-          className="submit-city"
+          className="submit-state"
         >
           Submit
         </button>

@@ -12,6 +12,7 @@
     width: 90%;
     display: flex;
     margin-left: 95px;
+    cursor: pointer;
 }
 
 button {
@@ -19,4 +20,5 @@ button {
     font-family: 'Kelly Slab', cursive;
     font-weight: bold;
     width: 120px;
+    cursor: pointer;
 }

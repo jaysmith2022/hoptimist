@@ -2,22 +2,22 @@
 .single-brewery-address,
 .single-brewery-phone,
 .single-brewery-website {
-    color: white;
+  color: white;
 }
 
 .single-brewery-website a {
-    color: #ff0000; /* change this to the desired color */
-  }
+  color: #ff0000;
+}
 
 .single-brewery-details {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .back-button {
-    margin-top: 20px;
-    width: 90%;
-    display: flex;
-    justify-content: flex-start;
+  margin-top: 20px;
+  width: 90%;
+  display: flex;
+  justify-content: flex-start;
 }

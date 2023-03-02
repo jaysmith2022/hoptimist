@@ -14,7 +14,7 @@
     cursor: pointer;
   }
   
-  .submit-city {
+  .submit-state {
     margin-left: 2%;
     height: 3vh;
     border-radius: 5px;
@@ -23,7 +23,7 @@
     cursor: pointer;
   }
   
-  .submit-city:hover {
+  .submit-state:hover {
     background-color: rgba(0, 0, 0, 0.941);
     color: white;
   }
@@ -32,13 +32,6 @@
     margin-left: 2%;
   }
   
-  #cities {
-    margin-right: 2%;
-  }
-  
-  span {
-    font-size: 2vw;
-  }
   
   @media screen and (max-width: 768px) {
     .city-selector {
