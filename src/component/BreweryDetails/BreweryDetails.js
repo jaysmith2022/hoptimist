@@ -43,7 +43,7 @@ class BreweryDetails extends React.Component {
   }
 
   render() {
-    const MAPBOX_TOKEN = process.env.REACT_APP_APIKEY;
+    const MAPBOX_TOKEN = "pk.eyJ1IjoiamF5c21pdGg2MDM1IiwiYSI6ImNsZXEzMDZzODA5NGIzc3BoNTZxeTcyNGUifQ.o85HEkHjse8_WF-O5_d7jg"
     return (
       <div className="single-brewery-details">
         <div className="back-button">
