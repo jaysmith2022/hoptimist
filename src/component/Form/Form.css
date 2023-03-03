@@ -1,0 +1,57 @@
+.city-selector {
+    margin-top: 2%;
+    color: white;
+  }
+  
+  label {
+    font-size: 2.5vw;
+    margin-right: 2%;
+  }
+  
+  select {
+    width: 25vw;
+    height: 3vh;
+    cursor: pointer;
+  }
+  
+  .submit-state {
+    margin-left: 2%;
+    height: 3vh;
+    border-radius: 5px;
+    background-color: white;
+    width: 10vw;
+    cursor: pointer;
+  }
+  
+  .submit-state:hover {
+    background-color: rgba(0, 0, 0, 0.941);
+    color: white;
+  }
+  
+  #state {
+    margin-left: 2%;
+  }
+  
+  
+  @media screen and (max-width: 768px) {
+    .city-selector {
+        display: flex;
+    }
+
+    label {
+      font-size: 4vw;
+    }
+  
+    select {
+      width: 50vw;
+      height: 5vh;
+    }
+  
+    .submit-city {
+      width: 20vw;
+    }
+  
+    span {
+      font-size: 3vw;
+    }
+  }

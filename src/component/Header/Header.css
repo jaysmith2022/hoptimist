@@ -1,0 +1,62 @@
+
+.header-graphic {
+  height: 55vh;
+  width: 100%;
+  max-width: 100%;
+  background-image: url("/src/assets/beer-page.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.header-wrapper {
+    height: 20vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+img {
+    margin-right: 100px;
+}
+
+@media screen and (max-width: 768px) {
+    .header-graphic {
+      height: 30vh;
+    }
+    
+    .header-wrapper {
+      height: 10vh;
+      flex-direction: column;
+      justify-content: center;
+    }
+    
+    img {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  }
+  
+  @media screen and (min-width: 768px) {
+    .header-graphic {
+      height: 55vh;
+    }
+    
+    .header-wrapper {
+      height: 20vh;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+    }
+    
+    img {
+      margin-right: 100px;
+    }
+  }
+
+
+
+
