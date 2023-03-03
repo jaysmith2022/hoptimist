@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import "./Form.css";
 import { withRouter } from "react-router-dom";
 
@@ -70,5 +71,17 @@ class Form extends React.Component {
     );
   }
 }
+
+Form.propTypes = {
+  filterBrewery: PropTypes.func.isRequired,
+  states: PropTypes.arrayOf(
+    PropTypes.shape({
+      state: PropTypes.string.isRequired,
+    })
+  ),
+  history: PropTypes.shape({
+    push: PropTypes.func.isRequired,
+  }).isRequired,
+};
 
 export default withRouter(Form);

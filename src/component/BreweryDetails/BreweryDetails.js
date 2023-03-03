@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import Map, { Marker } from "react-map-gl";
 import "./BreweryDetails.css";
 import { getSingleBrewery } from "../../apicall";
@@ -6,8 +7,8 @@ import "mapbox-gl/dist/mapbox-gl.css";
 import { Link } from "react-router-dom";
 
 class BreweryDetails extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       singleBrewery: [],
       error: "",
@@ -42,8 +43,7 @@ class BreweryDetails extends React.Component {
   }
 
   render() {
-    const MAPBOX_TOKEN =
-      process.env.REACT_APP_APIKEY
+    const MAPBOX_TOKEN = process.env.REACT_APP_APIKEY;
     return (
       <div className="single-brewery-details">
         <div className="back-button">
@@ -62,17 +62,17 @@ class BreweryDetails extends React.Component {
         <p className="single-brewery-phone">
           Phone Number: {this.state.singleBrewery.phone}
         </p>
-        {this.state.singleBrewery.website_url !== null &&
-        <p className="single-brewery-website">
-          <a
-            href={this.state.singleBrewery.website_url}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Visit The Website
-          </a>
-        </p>
-        }
+        {this.state.singleBrewery.website_url !== null && (
+          <p className="single-brewery-website">
+            <a
+              href={this.state.singleBrewery.website_url}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Visit The Website
+            </a>
+          </p>
+        )}
         {this.state.viewport.latitude === 0 ? (
           <h3>Loading...</h3>
         ) : (
@@ -100,5 +100,13 @@ class BreweryDetails extends React.Component {
     );
   }
 }
+
+BreweryDetails.propTypes = {
+  match: PropTypes.shape({
+    params: PropTypes.shape({
+      brewID: PropTypes.string.isRequired,
+    }).isRequired,
+  }).isRequired,
+};
 
 export default BreweryDetails;

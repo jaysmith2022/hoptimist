@@ -8,6 +8,7 @@ import { Brewery } from "../Brewery/Brewery";
 import { Route, Switch, Link } from "react-router-dom";
 import logo from "../../assets/logo-black.png";
 import BreweryDetails from "../BreweryDetails/BreweryDetails";
+import PropTypes from "prop-types";
 
 class App extends React.Component {
   constructor() {
@@ -91,5 +92,12 @@ class App extends React.Component {
     );
   }
 }
+
+App.propTypes = {
+  states: PropTypes.arrayOf(PropTypes.object),
+  filterBrewery: PropTypes.func.isRequired,
+  breweries: PropTypes.arrayOf(PropTypes.object),
+  brewID: PropTypes.string.isRequired,
+};
 
 export default App;

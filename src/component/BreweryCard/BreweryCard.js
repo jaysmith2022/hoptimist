@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import "./BreweryCard.css";
 import { Link } from "react-router-dom";
 
@@ -13,4 +14,12 @@ export const BreweryCard = ({ id, name, city, state, address }) => {
       </div>
     </Link>
   );
+};
+
+BreweryCard.propTypes = {
+  id: PropTypes.number.isRequired,
+  name: PropTypes.string.isRequired,
+  city: PropTypes.string.isRequired,
+  state: PropTypes.string.isRequired,
+  address: PropTypes.string.isRequired
 };
