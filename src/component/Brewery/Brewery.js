@@ -31,7 +31,7 @@ export const Brewery = ({ breweries }) => {
 
 Brewery.propTypes = {
   breweries: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.number.isRequired,
+    id: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     city: PropTypes.string.isRequired,
     state: PropTypes.string.isRequired,
