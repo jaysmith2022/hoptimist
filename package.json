@@ -41,6 +41,7 @@
     ]
   },
   "devDependencies": {
-    "cypress": "^12.7.0"
+    "cypress": "^12.7.0",
+    "worker-loader": "^3.0.8"
   }
 }

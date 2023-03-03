@@ -4,6 +4,8 @@ import Map, { Marker } from "react-map-gl";
 import "./BreweryDetails.css";
 import { getSingleBrewery } from "../../apicall";
 import "mapbox-gl/dist/mapbox-gl.css";
+import mapboxgl from 'mapbox-gl';
+mapboxgl.workerClass = require('worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker').default;
 import { Link } from "react-router-dom";
 
 class BreweryDetails extends React.Component {
