@@ -76,7 +76,7 @@ Form.propTypes = {
   filterBrewery: PropTypes.func.isRequired,
   states: PropTypes.arrayOf(
     PropTypes.shape({
-      state: PropTypes.string.isRequired,
+      state: PropTypes.string,
     })
   ),
   history: PropTypes.shape({

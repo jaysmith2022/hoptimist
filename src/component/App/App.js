@@ -95,9 +95,9 @@ class App extends React.Component {
 
 App.propTypes = {
   states: PropTypes.arrayOf(PropTypes.object),
-  filterBrewery: PropTypes.func.isRequired,
+  filterBrewery: PropTypes.func,
   breweries: PropTypes.arrayOf(PropTypes.object),
-  brewID: PropTypes.string.isRequired,
+  brewID: PropTypes.string,
 };
 
 export default App;
