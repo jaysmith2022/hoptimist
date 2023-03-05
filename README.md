@@ -83,7 +83,7 @@
 ## Getting Started
 
 ### Installation
-## To use the deployed app visit: https://quizard.herokuapp.com/
+## To use the deployed app visit: <a href="https://hoptimist.vercel.app" target="_blank">https://hoptimist.vercel.app</a>
 
 1. Fork the Repo from the [Repository](https://github.com/jaysmith2022/hoptimist)
 2. Clone the repo
