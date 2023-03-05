@@ -1,22 +1,24 @@
 .state-selector {
-    margin-top: 2%;
-    color: white;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+  margin-top: 2%;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+
   }
   
   label {
     font-size: 2.5vw;
     margin-right: 2%;
-    flex-basis: 100%;
   }
   
   select {
     width: 25vw;
     height: 3vh;
     cursor: pointer;
-    flex-basis: 60%;
   }
   
   .submit-state {
