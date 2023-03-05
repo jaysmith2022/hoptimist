@@ -9,6 +9,7 @@
   box-shadow: 12px 12px 24px rgba(255, 254, 254, 0.519);
   transition: transform 250ms;
   color: black;
+  overflow: hidden;
 }
 
 

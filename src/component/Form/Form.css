@@ -1,17 +1,22 @@
-.city-selector {
+.state-selector {
     margin-top: 2%;
     color: white;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
   }
   
   label {
     font-size: 2.5vw;
     margin-right: 2%;
+    flex-basis: 100%;
   }
   
   select {
     width: 25vw;
     height: 3vh;
     cursor: pointer;
+    flex-basis: 60%;
   }
   
   .submit-state {
@@ -21,6 +26,7 @@
     background-color: white;
     width: 10vw;
     cursor: pointer;
+    flex-basis: 30%;
   }
   
   .submit-state:hover {
@@ -34,24 +40,26 @@
   
   
   @media screen and (max-width: 768px) {
-    .city-selector {
-        display: flex;
-    }
-
     label {
       font-size: 4vw;
+      flex-basis: 100%;
     }
   
     select {
       width: 50vw;
       height: 5vh;
+      flex-basis: 100%;
+      margin-top: 2%;
     }
   
-    .submit-city {
+    .submit-state {
       width: 20vw;
+      flex-basis: 100%;
+      margin-top: 2%;
     }
   
     span {
       font-size: 3vw;
+      flex-basis: 100%;
     }
   }
