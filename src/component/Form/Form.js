@@ -48,8 +48,8 @@ class Form extends React.Component {
     }
 
     return (
-      <div className="city-selector">
-        <label htmlFor="cities">Choose a location:</label>
+      <div className="state-selector">
+        <label htmlFor="states">Choose a location:</label>
         <select
           className="drop-down"
           onChange={(event) => this.setState({ state: event.target.value })}

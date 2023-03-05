@@ -5,6 +5,7 @@
     width: 90%;
     margin: 4% auto;
     gap: 25px 25px;
+    overflow: hidden;
 }
 
 .back-button-1 {
