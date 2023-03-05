@@ -59,7 +59,7 @@ https://user-images.githubusercontent.com/107894408/222975476-457a6cad-4286-447c
 
 
 
-
+In this solo project I utilized React.js, Cypress, and APIs. The app I created allows users to filter breweries near them by selecting a state. The app pulls a list of breweries in the selected state, their locations, and displays them in cards. Upon selecting a card, the user is taken to a new screen with more details about the brewery, including the location, phone number, and website (if applicable). Additionally, there is an interactive map on this screen that displays the brewery's location. The user can navigate back to the list of breweries or to the homepage at any time.
 
 
 
